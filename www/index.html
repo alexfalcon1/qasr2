@@ -81,7 +81,7 @@ body {
   <div data-role="navbar">
     <ul>
       <li><a data-icon="home"	href="#pageabout">عن الفندق</a></li>
-      <li><a  data-icon="grid" onclick="openlink($(this).attr('href'))" href="http://qasralsahab.com/hotel-booking/" >الحجز</a></li>
+      <li><a  data-icon="grid" onclick="openlink($(this).attr('href'))" href="http://qasralsahab.com/mobile-reg-form/" >الحجز</a></li>
       <li><a data-icon="mail" href="#pagetwo">إتصل بنا</a></li>
     </ul>
   </div>
@@ -120,12 +120,43 @@ body {
   //document.write('<iframe src="http://qasralsahab.com" frameborder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%');
  //document.write(';widt h:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px" height="100%" width="100%"></iframe>');
   }
+
 function openlink(href){
   var ref = cordova.InAppBrowser.open(href, '_blank', 'location=no');
+  ref.addEventListener('loadstart', inAppBrowserbLoadStart);
+ref.addEventListener('loadstop', inAppBrowserbLoadStop);
+ref.addEventListener('loaderror', inAppBrowserbLoadError);
+ref.addEventListener('exit', inAppBrowserbClose);
 }
 function sysopenlink(href){
   var ref = cordova.InAppBrowser.open(href, '_system', 'location=no');
+  ref.addEventListener('loadstart', inAppBrowserbLoadStart);
+ref.addEventListener('loadstop', inAppBrowserbLoadStop);
+ref.addEventListener('loaderror', inAppBrowserbLoadError);
+ref.addEventListener('exit', inAppBrowserbClose);
 }
+
+function inAppBrowserbLoadStart(event) {
+   navigator.notification.activityStart("لطفا إنتظر قليلا", "جاري الإتصال بخادم موقع الفندق...");
+}
+
+function inAppBrowserbLoadStop(event) {
+   navigator.notification.activityStop();
+}
+
+function inAppBrowserbLoadError(event) {
+   navigator.notification.activityStop();
+}
+
+function inAppBrowserbClose(event) {
+   navigator.notification.activityStop();
+   ref.removeEventListener('loadstart', inAppBrowserbLoadStart);
+   ref.removeEventListener('loadstop', inAppBrowserbLoadStop);
+   ref.removeEventListener('loaderror', inAppBrowserbLoadError);
+   ref.removeEventListener('exit', inAppBrowserbClose);
+}
+
+
     </script>
 
     <div data-role="page" data-dialog="true" id="pagetwo">
