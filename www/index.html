@@ -48,11 +48,11 @@
     <title>qasralsahab</title>
     <style type="text/css">
 body {
-    background: url(images/sky.jpg);
-    background-repeat:repeat-y;
+    background: url(images/sky.jpg) #0B1E6B;
+    background-repeat:no-repeat;
     background-position:center center;
     background-attachment:scroll;
-    background-size:100% 100%;
+    background-size:cover;
 }
 .ui-page {
     background: transparent;
@@ -80,14 +80,21 @@ body {
       <div data-role="header">
   <div data-role="navbar">
     <ul>
-      <li><a data-icon="home"	href="#pageabout">عن الفندق</a></li>
+      <li><a data-icon="info"	href="#pageabout">عن الفندق</a></li>
       <li><a  data-icon="grid" onclick="openlink($(this).attr('href'))" href="http://qasralsahab.com/mobile-reg-form/" >الحجز</a></li>
       <li><a data-icon="mail" href="#pagetwo">إتصل بنا</a></li>
     </ul>
   </div>
   </div>
 
-
+  <ul data-role="listview" data-inset="true">
+        <li><a href="#lpage">تجهيز ليلة العمر</a></li>
+        <li><a href="#hpage">النادي الصحي</a></li>
+        <li><a href="#bpage">ركن مخبوزات السحاب</a></li>
+        <li><a onclick="openlink($(this).attr('href'))" href="http://qasralsahab.com/restaurant-services/">خدمات المطعم</a></li>
+        <li><a onclick="openlink($(this).attr('href'))" href="http://qasralsahab.com/wedding-meeting-rooms/">قاعات الحفلات والإجتماعات</a></li>
+  <li><a onclick="openlink($(this).attr('href'))" href="  http://qasralsahab.com/business-center/">مركز قصر السحاب لخدمة رجال الاعمال  </a></li>
+      </ul>
   </div>
 
   <div data-role="footer">
@@ -199,6 +206,81 @@ function inAppBrowserbClose(event) {
         <h1> </h1>
       </div>
     </div>
+
+    <div data-role="page" id="lpage">
+      <div data-role="header">
+        <h1>تجهيز ليلة العمر</h1>
+      </div>
+
+      <div data-role="main" class="ui-content">
+        <div style="direction:rtl;text-align:right;">
+
+          			<p>يتميز فندق قصر السحاب بتقديم خدمة تجهيز غرف العرسان ويشمل التجهيزات التالية:</p>
+          <ul>
+          <li>تجهيز السرير بطريقة ألف ليله وليله</li>
+          <li>أضاءه خاصة بالغرف</li>
+          <li>أضافه ورد عا لسرير علي شكل قلب عشاء خاص للعرسان قالب كيك لشخصين</li>
+          <li>باقة زهور طبيعي</li>
+          <li>مشروب ضيافة خاص بالعرسان</li>
+          <li>سلة فواكه لشخصين</li>
+          <li>مدخل خاص للعرسان</li>
+          </ul>
+          <img src="images/l/1.jpg" style="width:100%" />
+          <img src="images/l/2.jpg" style="width:100%" />
+          <img src="images/l/3.jpg" style="width:100%" />
+          <img src="images/l/4.jpg" style="width:100%" />
+          <img src="images/l/5.jpg" style="width:100%" />
+
+
+</div>
+</div>
+</div>
+
+<div data-role="page" id="bpage">
+  <div data-role="header">
+    <h1>ركن مخبوزات السحاب</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <div style="direction:rtl;text-align:right;">
+
+			<h3 style="text-align: right;">ركن حلويات ومخبوزات السحاب</h3>
+<p style="text-align: right;">ويتميز بتقديمه للمخبوزات الطازجة والحلويات الشرقية والغربية وتشكيلة الشيف المتنوعة من التارت &nbsp;والجاتوهات ، كما يتميز بتوفير متطلبات تجهيز الحفلات والمناسبات الخاصة من اطباق المعجنات والحلويات الخاصة حسب طلبات العميل.</p>
+<img src="images/b/1.jpeg"style="width:100%"/>
+<img src="images/b/2.jpeg"style="width:100%"/>
+<img src="images/b/3.jpeg"style="width:100%"/>
+		</div>
+	</div>
+  	</div>
+
+<div data-role="page" id="hpage">
+  <div data-role="header">
+    <h1>النادي الصحي</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <div style="direction:rtl;text-align:right;">
+      			<h3>المساج السويدي</h3>
+      <p>يعتبر المساج السويدي من أكثر أنواع المساج شيوعًا والذي يعتبر أيضًا من أفضل أنواع المساج علي الاطلاق لما له من قدرة فائقة علي توفير الاسترخاء<br>
+      أما عن أهم فوائد هذا النوع من المساج فهو يقوم بتحضير ودعم جهاز المناعة وتحسين صحة البشرة وذلك لكونه يعمل علي زيادة معدلات تدفق الأوكسجين في الدم<br>
+      ويستهدف هذا النوع من المساج الطبقات السطحية من البشرة، لذلك يعتبر هذا النوع من المساج العلاجي الأمثل بالنسبة لهؤلاء الذين يسعون لاكتشاف الفائدة القصوي من العلاج الطبيعي</p>
+      <p>كما أنه غاية في الأهمية بالنسبة لهؤلاء الذين يحتاجون إلي الاسترخاء بعد يوم من العمل الشاق</p>
+      <img src="images/h/1.jpg"style="width:100%"/>
+
+			<h3>مساج شياتسو</h3>
+<p>ويعد هذا النوع من المساج جزء من الثقافة الشرقية والذي يكون من خلال الضغط علي مناطق معينة بالجسم لإثارة الطاقة التي تتدفق بعد ذلك إلي أجزاء أخري من الجسم ولكن بصورة صحيحة</p>
+<p>ويستخدم هذا النوع من المساج لعلاج تيبس العضلات، وتحسين الدورة الدموية وتجنب الصداع، والغريب في الأمر أن هذا النوع من المساج يستخدم لعلاج بعض مشاكل الهضم<br>
+وكذلك يتم استخدام هذا المساج دون استخدام أي نوع من الزيوت كما أن الشخص الذي يجري له المساج يظل مضغوطًا عليه طيلة وقت الاستخدام</p>
+      <img src="images/h/2.jpeg" style="width:100%"/>
+
+  			<h3>مساج الهوت ستون او الاحجار الساخنة</h3>
+  <p>ويعد هذا النوع من المساج طريقة علاجية غير تقليدية وغير معتادة بخلاف الأنواع السابقة إلا انه في نفس الوقت شائع الاستخدام عالميًا ويتم من خلال استخدام بعضًا من أحجار البازلت الناعمة والمسخنة لمناطق تعددة من الجسم مثل منطقة الرقبة والكفين وحتي أصابع القدمين</p>
+  <p>لكنه يعتبر خفيفًا مقارنة بمساج الأنسجة العميقة وله مزايا عديدة ويعتبر هذا النوع من المساج مفيدًا لمن يعانون من آلام الظهر ومن يعانون من التدفق البطئ للدورة الدموية لأنه يعمل علي تحفيز وسرعة جريان الدورة الدموية في الجسم</p>
+
+
+    </div>
+      </div>
+        </div>
 
     <div data-role="page" data-dialog="true" id="pageabout">
       <div data-role="header">
